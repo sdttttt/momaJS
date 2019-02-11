@@ -8,10 +8,15 @@
     </swiper>
   <view class="foot">
     <view class="button">
-      <button class="btn">扫码充电</button>
+      <button class="btn" bindtap='scan'>扫码充电</button>
     </view>
-    <view class="enter">
+    <view class="enter" bindtap='onInput'>
       <text>输入充电线编号</text>
     </view>
   </view>
+
+  <modal title="充电编号" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="go" hidden="{{input}}" no-cancel="{{nocancel}}">
+    <input class="inputBox" bindinput='getInput' type='text'>编号</input>
+</modal>
+
 </view>

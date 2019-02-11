@@ -17,9 +17,9 @@
 
 .foot{
   position: fixed;
-  width: 90%;
-  left: 37rpx;
-  height: 400rpx;
+  width: 85%;
+  left: 60rpx;
+  height: 333rpx;
   top: 888rpx;
 }
 
@@ -40,4 +40,16 @@
   font-size: 35rpx;
   color:#555;
   text-decoration: underline;
+}
+.inputBox{
+  background-color:white;
+  width: 85%;
+  margin: auto;
+  font-size:50rpx;
+  color: black;
+  font-weight: 800;
+  height: 100rpx;
+  border: 1rpx solid #EEE;
+  border-radius: 44rpx;
+  text-align: center;
 }
