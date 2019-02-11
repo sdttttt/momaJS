@@ -1,9 +1,17 @@
 <view class="container">
-    <swiper  class="swiper" interval='1000' indicator-dots="true" autoplay="true">
+    <swiper  class="swiper">
       <block wx:for="{{banner}}" wx:key="id">
         <swiper-item>
           <image src="{{imgUrl + item.image.url}}"></image>
         </swiper-item>
       </block>
     </swiper>
+  <view class="foot">
+    <view class="button">
+      <button class="btn">扫码充电</button>
+    </view>
+    <view class="enter">
+      <text>输入充电线编号</text>
+    </view>
+  </view>
 </view>
