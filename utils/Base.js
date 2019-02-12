@@ -8,12 +8,12 @@ class Base{
 
   request(params, callback, noRefetch){
     var that = this;
-    this.url += params.url;
+    var url = this.url + params.url;
     if(!params.method){
       params.method = "GET";
     }
     wx.request({
-      url: this.url,
+      url: url,
       method:params.method,
       success:function(res){
           console.log(res);

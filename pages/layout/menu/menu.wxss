@@ -18,9 +18,61 @@
   top:0;
   left:0;
   opacity:0.5;
+  transition: background-color 1s;
 }
 
 .menuMove{
   transform: rotate(0deg) scale(1) translate(100%, 0%);
   -webkit-transform: rotate(0deg) scale(1) translate(100%, 0%);
+}
+
+.showUserInfo .headImg{
+  margin: auto;
+  border: 5rpx solid ivory;
+  border-radius: 150rpx;
+  width: 300rpx;
+  height: 300rpx;
+  text-align: center;
+}
+.showUserInfo .headImg .text{
+  text-align: center;
+  width: 100%;
+  height: 20%;
+  font-size:44rpx;
+  font-weight: 800;
+}
+.showUserInfo .headImg image{
+  border-radius: 150rpx;
+  width: 80%;
+  height: 80%;
+}
+
+.showUserInfo .theme-box{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.showUserInfo .theme-box .theme-item{
+  margin: auto;
+  border-top: 1rpx solid #EEE;
+  width: 90%;
+  display: flex;
+  height: 100rpx;
+}
+
+.showUserInfo .theme-box .theme-item image{
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  width: 20%;
+  height: 70%;
+}
+
+.showUserInfo .theme-box .theme-item .text{
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  line-height: 100rpx;
+  font-size:33rpx;
+  font-family: 微软雅黑;
 }

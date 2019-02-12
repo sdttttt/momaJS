@@ -14,6 +14,14 @@ class indexService extends Base{
     this.request(params,callback);
   }
 
+  getThemeAll(callback){
+    var params = {
+      "method" : "GET",
+      "url" : "theme/1"
+    };
+    this.request(params,callback);
+  }
+
   getUserInfo(callback){
     wx.login({
       success:function(res){

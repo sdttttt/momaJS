@@ -1,14 +1,25 @@
 <template name="menu">
-<view bindtap='closeMenu' class="{{ userbtnStatus.userbtnStatus?'cover':'' }}">
+<view bindtap='closeMenu' class="{{ menuValue.userbtnStatus?'cover':'' }}">
 </view>
-<view class="menu {{ userbtnStatus.userbtnStatus?'menuMove':'' }}">
-    <block wx:if="{{userbtnStatus.notUserInfo}}">
+<view class="menu {{ menuValue.userbtnStatus?'menuMove':'' }}">
+    <block wx:if="{{menuValue.notUserInfo}}">
       <button bindgetuserinfo='onClickGetUserInfo' open-type='getUserInfo'>点击授权</button>
     </block>
     <block wx:else>
+    <view  class="showUserInfo">
       <view class="headImg">
-        <image src='{{ userInfo.avatarUrl }}'></image>
+        <image src='{{ menuValue.userInfo.avatarUrl }}'></image>
+      <view class="text">{{ menuValue.userInfo.nickName }}</view>
       </view>
+        <view class="theme-box">
+        <block wx:for="{{ menuValue.theme }}" wx:key="id">
+          <view class="theme-item" data-name="{{item.ename}}" bindtap='redirect'>
+            <image src='{{ menuValue.imgUrl + item.image.url }}'></image>
+            <view class="text">{{ item.name }}</view>
+          </view>
+        </block>
+        </view>
+    </view>
     </block>
 </view>
 

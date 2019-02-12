@@ -23,12 +23,11 @@ class Token{
       method:"POST",
       data:{ token:token },
       success:function(res){
-        console.log(res.data.isVerify);
-        var status = res.data.isVerify;
-        if(!isVerify){
+        var status = res.data.verify;
+        if (!status){
           that.getTokenFromServer();
         }
-        console.log(res.data.isVerify);
+        
       }
     })
   }

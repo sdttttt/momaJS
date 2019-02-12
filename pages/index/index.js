@@ -47,6 +47,11 @@ Page({
           banner:data.banner_item,
       });
     });
+    service.getThemeAll((data)=>{
+      this.setData({
+          theme:data.theme_item
+      });
+    });
     //加载完成隐藏加载窗口
     this.setData({
       loadHidden: true
@@ -107,7 +112,10 @@ Page({
   //获取用户信息按钮
   onClickGetUserInfo:function(event){
     if(!event.detail.userInfo){
-      
+      //这里要写刷新的代码
     }
+  },
+  redirect:function(event){
+    console.log(event.target.dataset);
   }
 })

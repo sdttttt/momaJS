@@ -20,7 +20,7 @@
   </view>
 
   <!-- userbtnStatus 不知道怎么命名 这先这样吧  -->
-  <template is="menu" data="{{ userbtnStatus:{userbtnStatus:userbtnStatus,notUserInfo:notUserInfo,userInfo:userInfo} }}" />
+  <template is="menu" data="{{ menuValue:{ imgUrl:imgUrl, userbtnStatus:userbtnStatus,notUserInfo:notUserInfo,userInfo:userInfo,theme:theme} }}" />
  
 
   <modal title="充电编号" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="go" hidden="{{input}}" no-cancel="{{nocancel}}">

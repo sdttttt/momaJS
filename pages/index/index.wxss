@@ -66,8 +66,7 @@
   border-radius: 100rpx;
   width: 300rpx;
   text-align: right;
-  transform: left 1s;
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 .userbtnJump{
