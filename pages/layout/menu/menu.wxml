@@ -6,7 +6,9 @@
       <button bindgetuserinfo='onClickGetUserInfo' open-type='getUserInfo'>点击授权</button>
     </block>
     <block wx:else>
-    
+      <view class="headImg">
+        <image src='{{ userInfo.avatarUrl }}'></image>
+      </view>
     </block>
 </view>
 

@@ -30,6 +30,7 @@ Page({
           notUserInfo:res.notUserInfo
         });
       }else{
+        //只有授权用户信息才会去获取令牌
         this.setData({
           userInfo:res
         });
