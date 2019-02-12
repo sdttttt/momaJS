@@ -16,8 +16,8 @@ class indexService extends Base{
 
   getThemeAll(callback){
     var params = {
-      "method" : "GET",
-      "url" : "theme/1"
+      method : "GET",
+      url : "theme/1"
     };
     this.request(params,callback);
   }

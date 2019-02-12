@@ -14,6 +14,9 @@ class Base{
     }
     wx.request({
       url: url,
+      header:{
+        "token": wx.getStorageSync("token")
+      },
       method:params.method,
       success:function(res){
           console.log(res);

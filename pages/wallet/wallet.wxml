@@ -1,0 +1,21 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="container">
+  <view class="myWallet" bindtap='gorca' data-num = "{{ myWallet }}">
+    <view class="text">
+    <view class="name">账户余额</view>
+    <view class="num">￥{{ myWallet }}</view>
+    </view>
+    <view class="icon">
+      <image src='../../icon/qian.png'></image>
+    </view>
+  </view>
+  <view class="myCard">
+    <view class="text">
+      <view class='name'>充电卡</view>
+      <view class="num">0张</view>
+    </view>
+    <view class="icon">
+      <image src='../../icon/card.png'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="container">
+  <view class="display">
+    <view class="text">您的余额</view>
+    <view class="num">{{ wallet }}￥</view>
+  </view>
+
+  <view class="action">
+    <view class="title">充值金额</view>
+    <view class="money">
+      <block wx:for="{{ moneyArray }}" wx:key="id">
+        <view class="{{ moneySelected == index ? 'money-itemSelect':'money-item' }}" bindtap='onClickMoney' data-num='{{ index }}'>
+          {{ item }}元
+        </view>
+      </block>
+    </view>
+    <view class="money-item-orthe" bindtap='inputMoney'>其他</view>
+
+    <view class="submit"> 确认充值 </view>
+
+  </view>
+
+<modal title="充电编号" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="go" hidden="{{input}}" no-cancel="{{nocancel}}">
+    <input class="inputBox" bindinput='getInput' type='text'>编号</input>
+</modal>
+
+</view>

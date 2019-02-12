@@ -60,7 +60,7 @@ Page({
 
 
   //打开扫码功能
-  scan:function(){
+  scan:function(event){
     wx.scanCode({
     success:function(res){
       console.log(res);
@@ -116,6 +116,9 @@ Page({
     }
   },
   redirect:function(event){
-    console.log(event.target.dataset);
+    var name = event.currentTarget.dataset.name;
+    wx.navigateTo({
+      url: "../" + name + "/" + name 
+    });
   }
 })
