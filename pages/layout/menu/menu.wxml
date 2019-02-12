@@ -1,0 +1,13 @@
+<template name="menu">
+<view bindtap='closeMenu' class="{{ userbtnStatus.userbtnStatus?'cover':'' }}">
+</view>
+<view class="menu {{ userbtnStatus.userbtnStatus?'menuMove':'' }}">
+    <block wx:if="{{userbtnStatus.notUserInfo}}">
+      <button bindgetuserinfo='onClickGetUserInfo' open-type='getUserInfo'>点击授权</button>
+    </block>
+    <block wx:else>
+    
+    </block>
+</view>
+
+</template>

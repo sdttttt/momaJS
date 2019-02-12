@@ -1,0 +1,26 @@
+.menu{
+  position: fixed;
+  top: 0rpx;
+  left: -55%;
+  height: 100%;
+  width: 55%;
+  background-color: white;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.cover{
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:black;
+  z-index:50;
+  top:0;
+  left:0;
+  opacity:0.5;
+}
+
+.menuMove{
+  transform: rotate(0deg) scale(1) translate(100%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(100%, 0%);
+}

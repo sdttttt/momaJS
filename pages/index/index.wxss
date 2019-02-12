@@ -1,4 +1,6 @@
 /**index.wxss**/
+@import "../layout/menu/menu.wxss";
+
 .swiper{
   position: fixed;
   top: 77rpx;
@@ -52,4 +54,31 @@
   border: 1rpx solid #EEE;
   border-radius: 44rpx;
   text-align: center;
+}
+
+.userbtn{
+  position: fixed;
+  left: -20%;
+  top: 1000rpx;
+  height: 100rpx;
+  background-color: white;
+  border: 4rpx solid #EEE;
+  border-radius: 100rpx;
+  width: 300rpx;
+  text-align: right;
+  transform: left 1s;
+  transition: transform 1s;
+}
+
+.userbtnJump{
+  transform: rotate(0deg) scale(1) translate(-50%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(-50%, 0%);
+}
+
+.userbtn image{
+  position:relative;
+  top: 10rpx;
+  right: 10rpx;
+  width: 80rpx;
+  height: 80%;
 }

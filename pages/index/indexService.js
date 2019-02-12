@@ -13,6 +13,24 @@ class indexService extends Base{
     };
     this.request(params,callback);
   }
+
+  getUserInfo(callback){
+    wx.login({
+      success:function(res){
+        wx.getUserInfo({
+          success:function(res){
+            typeof callback == "function" && callback(res.userInfo);
+          },fail:function(err){ 
+            typeof callback == "function" && callback({
+              avatarUrl: '../../icon/user@default.png',
+              nickName: '还没有登录',
+              notUserInfo:true
+            }) 
+            }
+        });
+      }
+    });
+  }
 }
 
 export { indexService };

@@ -1,3 +1,4 @@
+<import src="../layout/menu/menu.wxml"></import>
 <view class="container">
     <swiper  class="swiper">
       <block wx:for="{{banner}}" wx:key="id">
@@ -14,9 +15,19 @@
       <text>输入充电线编号</text>
     </view>
   </view>
+  <view bindtap='jumpMenu' class="userbtn {{ userbtnStatus?'userbtnJump':'' }}">
+    <image src='../../icon/user.png'></image>
+  </view>
+
+  <!-- userbtnStatus 不知道怎么命名 这先这样吧  -->
+  <template is="menu" data="{{ userbtnStatus:{userbtnStatus:userbtnStatus,notUserInfo:notUserInfo} }}" />
+ 
 
   <modal title="充电编号" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="go" hidden="{{input}}" no-cancel="{{nocancel}}">
     <input class="inputBox" bindinput='getInput' type='text'>编号</input>
 </modal>
 
 </view>
+<loading hidden="{{ loadHidden }}">
+  加载中...
+</loading>
