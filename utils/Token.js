@@ -3,8 +3,10 @@ import { Config } from "Config.js";
 class Token{
   
   constructor(){
-    this.loginUrl = Config.APIv1Url + "login";
-    this.checkUrl = Config.APIv1Url + "verify";
+    // this.loginUrl = Config.APIv1Url + "login";
+    this.loginUrl = Config.APIv1UrlJava + "login";
+    // this.checkUrl = Config.APIv1Url + "verify";
+    this.checkUrl = Config.APIv1UrlJava + "verify";
   }
 
   verify(){
@@ -21,6 +23,7 @@ class Token{
     wx.request({
       url: that.checkUrl,
       method:"POST",
+      header:{ token:token },
       data:{ token:token },
       success:function(res){
         var status = res.data.verify;

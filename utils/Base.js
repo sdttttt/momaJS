@@ -3,7 +3,8 @@ import { Token } from "Token.js";
 
 class Base{
   constructor(){
-    this.url = Config.APIv1Url;
+    this.url = Config.APIv1UrlJava;
+   // this.url = Config.APIv1Url;
   }
 
   request(params, callback, noRefetch){
@@ -15,7 +16,7 @@ class Base{
     wx.request({
       url: url,
       header:{
-        "token": wx.getStorageSync("token")
+        token : wx.getStorageSync("token")
       },
       method:params.method,
       success:function(res){

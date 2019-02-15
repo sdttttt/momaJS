@@ -15,7 +15,7 @@
         <block wx:for="{{ menuValue.theme }}" wx:key="id">
           <view class="theme-item" data-name="{{item.ename}}" bindtap='redirect'>
             <image src='{{ menuValue.imgUrl + item.image.url }}'></image>
-            <view class="text">{{ item.name }}</view>
+            <view class="text">{{ item.ename }}</view>
           </view>
         </block>
         </view>
