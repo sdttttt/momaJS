@@ -1,8 +1,7 @@
-import { walletService } from "walletService.js";
-import { Token } from "../../utils/Token.js";
+// pages/shopping/category/category.js
+import { categoryService } from "categoryService.js";
 
-var token = new Token();
-var service = new walletService();
+var service = new categoryService();
 
 Page({
 
@@ -17,22 +16,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadData(); 
+    this.loadData();
   },
-
-  loadData:function(){
-    service.getMyWallet((res)=>{
+  
+  loadData : function(){
+    service.getCategoryAll((data) => {
+      console.log(data);
       this.setData({
-        myWallet:res.wallet
+        data : data
       });
     });
   },
 
-  gorca:function(event){
-    wx.navigateTo({
-      url: '../recharge/recharge?id=' + event.currentTarget.dataset.num
-    });
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

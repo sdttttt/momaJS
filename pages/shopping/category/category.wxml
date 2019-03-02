@@ -1,0 +1,15 @@
+<!--pages/shopping/category/category.wxml-->
+<view class="container">
+	<view class="menu">
+		<block wx:for="{{ data }}">
+      <view class="categoryTitle"> 
+        {{ item.name }}
+      </view>
+    </block>  
+	</view>
+    <view class="products">
+      <view class="product">
+        
+      </view>
+    </view>
+</view>

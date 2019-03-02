@@ -111,8 +111,8 @@ Page({
 
   //获取用户信息按钮
   onClickGetUserInfo:function(event){
-    if(!event.detail.userInfo){
-      //这里要写刷新的代码
+    if(event.detail.userInfo){
+			this.onLoad();
     }
   },
   redirect:function(event){

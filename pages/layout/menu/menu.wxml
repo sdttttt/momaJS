@@ -3,7 +3,7 @@
 </view>
 <view class="menu {{ menuValue.userbtnStatus?'menuMove':'' }}">
     <block wx:if="{{menuValue.notUserInfo}}">
-      <button bindgetuserinfo='onClickGetUserInfo' open-type='getUserInfo'>点击授权</button>
+      <button class="userInfoClick" bindgetuserinfo='onClickGetUserInfo' open-type='getUserInfo'>点击授权</button>
     </block>
     <block wx:else>
     <view  class="showUserInfo">
@@ -15,7 +15,7 @@
         <block wx:for="{{ menuValue.theme }}" wx:key="id">
           <view class="theme-item" data-name="{{item.ename}}" bindtap='redirect'>
             <image src='{{ menuValue.imgUrl + item.image.url }}'></image>
-            <view class="text">{{ item.ename }}</view>
+            <view class="text">{{ item.name }}</view>
           </view>
         </block>
         </view>

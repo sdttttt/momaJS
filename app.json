@@ -4,12 +4,30 @@
     "pages/history/history",
     "pages/wallet/wallet",
     "pages/coupon/coupon",
-    "pages/recharge/recharge"
+    "pages/recharge/recharge",
+		"pages/shopping/category/category"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "猛犸充电",
     "navigationBarTextStyle": "black"
-  }
+  },
+	"tabBar" : {
+		"list" : [
+			{
+			"iconPath" : "icon/home.png",
+			"selectedIconPath" : "icon/home@selected.png",
+			"pagePath" : "pages/index/index",
+			"text" : "首页"
+		},{
+			"iconPath" : "icon/category.png",
+			"selectedIconPath" : "icon/category@selected.png",
+			"pagePath" : "pages/shopping/category/category",
+			"text" : "商城"
+		}
+		]
+
+	}
+	
 }

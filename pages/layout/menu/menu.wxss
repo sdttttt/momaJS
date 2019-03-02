@@ -76,3 +76,14 @@
   font-size:33rpx;
   font-family: 微软雅黑;
 }
+
+.userInfoClick{
+	margin: auto;
+	margin-top: 400rpx;
+	width: 90%;
+	background-color: #6495ED;
+	color: #FFFFFF;
+	font-weight: 800;
+	font-size: 55rpx;
+	border-radius: 100rpx;
+}

@@ -9,10 +9,10 @@ class Token{
     this.checkUrl = Config.APIv1UrlJava + "verify";
   }
 
-  verify(){
+  verify(callback){
     var token = wx.getStorageSync('token');
     if(!token){
-      this.getTokenFromServer();
+      this.getTokenFromServer(callback);
     }else{
       this._verifyFromServer(token);
     }

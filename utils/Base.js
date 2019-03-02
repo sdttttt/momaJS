@@ -38,6 +38,7 @@ class Base{
     });
   }
 
+  //状态码 401 重新获取token
   _refetch(params,callback){
     var token = new Token();
     token.getTokenFromServer((res)=>{

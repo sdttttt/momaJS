@@ -1,0 +1,20 @@
+/* pages/shopping/category/category.wxss */
+.menu{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  height: 100rpx;
+}
+.menu .categoryTitle{
+  font-family: "微软雅黑";
+  font-size: 38rpx;
+  background-color : white;
+}
+
+.menu .categoryTitleSelected{
+  font-family: "微软雅黑";
+  font-size: 44rpx;
+  background-color : red;
+}

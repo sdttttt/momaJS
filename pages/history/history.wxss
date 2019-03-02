@@ -1,1 +1,6 @@
 /* pages/history/history.wxss */
+.not-history{
+	height: 1000rpx;
+	widows: 100%;
+	text-align: center;
+}
