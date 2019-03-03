@@ -1,5 +1,6 @@
 // pages/shopping/category/category.js
 import { categoryService } from "categoryService.js";
+import { Config } from "../../../utils/Config.js";
 
 var service = new categoryService();
 
@@ -9,7 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imageUrl: Config.imageUrl,
+    selectedCategory: 0
   },
 
   /**
@@ -25,6 +27,13 @@ Page({
       this.setData({
         data : data
       });
+    });
+  },
+
+  onCategory: function(event){
+    var index = event.currentTarget.dataset.index;
+    this.setData({
+      selectedCategory:index
     });
   },
 

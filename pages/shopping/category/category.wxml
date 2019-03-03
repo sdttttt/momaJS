@@ -2,14 +2,23 @@
 <view class="container">
 	<view class="menu">
 		<block wx:for="{{ data }}">
-      <view class="categoryTitle"> 
+      <view bindtap="onCategory" class="{{ index == selectedCategory ? 'categoryTitleSelected' : 'categoryTitle' }}" data-index = "{{ index }}"> 
         {{ item.name }}
       </view>
     </block>  
 	</view>
     <view class="products">
-      <view class="product">
-        
-      </view>
+      <block wx:for ="{{ data[selectedCategory].product }}">
+        <view class="product">
+          <view class="img">
+            <image src='{{ imageUrl + item.image.url }}'></image>
+          </view>
+          <view class="context">
+            <view class="name">{{ item.name }}</view>
+            <view class="price">{{ item.price }}</view>
+            <view class="text">{{ item.info }}</view>
+          </view>
+        </view>
+      </block>
     </view>
 </view>
