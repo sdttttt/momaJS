@@ -1,0 +1,20 @@
+<!--pages/shopping/product/product.wxml-->
+<view class="container">
+  <view class="cart">
+    <image src='/icon/cart@top.png'></image>
+  </view>
+  <view class="img">
+    <image src='{{ imageUrl + data.image.url }}'>
+    </image>
+  </view>
+  <view class="count">
+    <view> 数量 </view>
+    <view> | </view>
+      <picker bindchange='onProductCountSelected' range='{{ countRange }}'>
+        <view> {{ productCount }} </view>
+      </picker>
+    <view class="cart-icon">
+      <image src='/icon/cart.png'></image>
+    </view>
+  </view>
+</view>

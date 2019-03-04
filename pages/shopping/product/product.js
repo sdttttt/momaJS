@@ -1,8 +1,8 @@
-// pages/shopping/category/category.js
-import { categoryService } from "categoryService.js";
+// pages/shopping/product/product.js
+import { productService } from "productService.js";
 import { Config } from "../../../utils/Config.js";
 
-var service = new categoryService();
+var service = new productService();
 
 Page({
 
@@ -10,38 +10,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imageUrl: Config.imageUrl,
-    selectedCategory: 0
+    countRange: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], 
+    imageUrl : Config.imageUrl,
+    productCount : 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadData();
+    this.loadData(options.id);
   },
-  
-  loadData : function(){
-    service.getCategoryAll((data) => {
+
+  loadData : function(id){
+    console.log(id);
+    service.getProductInfo(id,(data) => {
       console.log(data);
       this.setData({
         data : data
       });
     });
   },
-
-  onCategory: function(event){
-    var index = event.currentTarget.dataset.index;
+  
+  onProductCountSelected : function(event){
     this.setData({
-      selectedCategory:index
-    });
-  },
-
-  goProduct : function(event){
-    console.log(event);
-    let id = event.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '../product/product?id=' + id
+      productCount: this.data.countRange[event.detail.value]
     });
   },
 
@@ -49,7 +42,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

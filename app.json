@@ -5,7 +5,9 @@
     "pages/wallet/wallet",
     "pages/coupon/coupon",
     "pages/recharge/recharge",
-		"pages/shopping/category/category"
+		"pages/shopping/category/category",
+    "pages/shopping/product/product"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
