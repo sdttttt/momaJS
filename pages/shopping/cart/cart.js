@@ -29,7 +29,7 @@ Page({
 
     var price = this.productPrice();
     this.setData({
-      productPrice : price
+      productPrice: price.toFixed(2)
     });
   },
 
@@ -62,7 +62,7 @@ Page({
     service.updataProductSelect(index);
     this.setData({
       data: data,
-      productPrice : price
+      productPrice: price.toFixed(2)
     });
   },
 
