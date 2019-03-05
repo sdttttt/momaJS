@@ -68,11 +68,13 @@ class cartService extends Base
   deleteProductSelect(){
     var products = this.getCartCache();
     var index = 0;
-    for (let key = 0; key < products.length; key++) {
+    for (let key = 0; key <= products.length; key++) {
       key -= index;
+      index = 0;
       if (products[key].selected) {
+        console.log(products[key]);
         products.splice(key, 1);
-        index++;
+        index = 1;
       }
     }
     wx.setStorageSync(this._cacheKey, products);

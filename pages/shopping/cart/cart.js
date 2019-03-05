@@ -92,10 +92,10 @@ Page({
     var products = this.data.data;
     var index = 0;
     for(let key=0; key <= products.length ; key++){
-      console.log(key);
       key -= index;
       index = 0;
       if(products[key].selected){
+        console.log(products[key]);
         products.splice(key,1);
         index = 1;
       }
