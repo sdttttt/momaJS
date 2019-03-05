@@ -6,7 +6,8 @@
     "pages/coupon/coupon",
     "pages/recharge/recharge",
 		"pages/shopping/category/category",
-    "pages/shopping/product/product"
+    "pages/shopping/product/product",
+    "pages/shopping/cart/cart"
 
   ],
   "window": {
@@ -27,8 +28,12 @@
 			"selectedIconPath" : "icon/category@selected.png",
 			"pagePath" : "pages/shopping/category/category",
 			"text" : "商城"
-		}
-		]
+		},{
+      "iconPath" : "icon/cart.png",
+      "selectedIconPath" : "icon/cart@selected.png",
+      "pagePath" : "pages/shopping/cart/cart",
+      "text" : "购物车"
+    }]
 
 	}
 	

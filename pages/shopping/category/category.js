@@ -27,7 +27,10 @@ Page({
       this.setData({
         data : data
       });
+
     });
+    
+    
   },
 
   onCategory: function(event){

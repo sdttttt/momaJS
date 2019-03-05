@@ -3,6 +3,11 @@
   <view class="cart">
     <image src='/icon/cart@top.png'></image>
   </view>
+
+  <view class="cart-red-number">
+  {{ cartProductCount }}
+  </view>
+
   <view class="img">
     <image src='{{ imageUrl + data.image.url }}'>
     </image>
@@ -13,8 +18,14 @@
       <picker bindchange='onProductCountSelected' range='{{ countRange }}'>
         <view> {{ productCount }} </view>
       </picker>
-    <view class="cart-icon">
+    <view class="cart-icon" data-id='{{ data.id }}' bindtap="addCart" >
       <image src='/icon/cart.png'></image>
     </view>
   </view>
+
+  <view class="info">
+    <view class="title">{{ data.name }}</view>
+    <view class="price">{{ data.price }}</view>
+    <view class="info-info">{{ data.info }}</view>
+  </view>  
 </view>

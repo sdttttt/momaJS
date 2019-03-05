@@ -1,0 +1,52 @@
+<!--pages/shopping/cart/cart.wxml-->
+<view class="container">
+  <view wx:if="{{ data.length != 0 }}">
+    <block wx:for = "{{ data }}" wx:key="index" >
+      <view class="product">
+        <view class="selected" bindtap='onSelected' data-index='{{ index }}' >
+          <block wx:if="{{ item.selected }}">
+            <image src='/icon/circle@selected.png'></image>
+          </block>
+          <block wx:else>
+            <image src='/icon/circle@noselected.png'></image>
+          </block>
+        </view>
+        <view class="img">
+          <image src='{{ imageUrl + item.url }}'></image>
+        </view>
+        <view class="context">
+          <view class="title">{{ item.name }}</view>
+          <view class="price">￥{{ item.price }}</view>
+          <view class="count">x{{ item.count }}</view>
+        </view>
+      </view>
+    </block>
+
+    <view class="footer">
+      <view class="all">全选:</view>
+      <view class="all-selected" bindtap='onSelectedAll'>
+        <block wx:if="{{ selectAll }}">
+          <image src='/icon/all@selected.png'></image>
+        </block>
+        <block wx:else>
+          <image src='/icon/all.png'></image>
+        </block>
+      </view>
+      <view class="delete">
+      <button bindtap='onSelectDelete' class="delete-btn" type='warn'> 删除 </button>
+      </view>
+      <view class="price">
+        结算：<text class="product-price">{{ productPrice }}￥</text>
+      </view>
+      <view class="Go">
+        <button class="Go-btn" type='primary'> 结账 </button>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="notCart"> 
+      <view>您的购物车空空如也</view>
+      <view>去买点东西吧</view> 
+    </view>
+  </view>
+</view>
