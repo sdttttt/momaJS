@@ -62,7 +62,7 @@ Page({
     service.updataProductSelect(index);
     this.setData({
       data: data,
-      productPrice: price.toFixed(2)
+      productPrice: price
     });
   },
 
@@ -103,6 +103,32 @@ Page({
     service.deleteProductSelect();
     this.setData({
       data : products
+    });
+  },
+
+  //下单
+  goWe: function (event) {
+    var products = this.data.data;
+    var order = {
+      products : []
+    };
+    for( let key in products ){
+      if(products[key].selected){
+        var product = {};
+        product.id = products[key].id;
+        product.count = products[key].count;
+        order.products.push(product);
+      }
+    }
+    console.log(order);
+    service.placeAnOrder(order,(data) => {
+      console.log(data);
+      if(data.status){
+        wx.showModal({
+          title: 'message',
+          content: '下单成功,等待支付'
+        })
+      } 
     });
   },
 

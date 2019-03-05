@@ -10,6 +10,11 @@ class Base{
   request(params, callback, noRefetch){
     var that = this;
     var url = this.url + params.url;
+    if(!params.data){
+      var data = null;
+    }else{
+      var data = params.data;
+    }
     if(!params.method){
       params.method = "GET";
     }
@@ -18,6 +23,7 @@ class Base{
       header:{
         token : wx.getStorageSync("token")
       },
+      data : data,
       method:params.method,
       success:function(res){
           console.log(res);

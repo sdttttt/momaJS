@@ -79,6 +79,16 @@ class cartService extends Base
     }
     wx.setStorageSync(this._cacheKey, products);
   }
+
+  placeAnOrder(data,callback){
+    var params = {
+      method : "POST",
+      url : "order/make",
+      data : data
+    };
+    
+    this.request(params,callback);
+  }
 }
 
 export { cartService };

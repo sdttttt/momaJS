@@ -39,7 +39,7 @@
         结算：<text class="product-price">{{ productPrice }}￥</text>
       </view>
       <view class="Go">
-        <button class="Go-btn" type='primary'> 结账 </button>
+        <button class="Go-btn" bindtap='goWe' type='primary'> 结账 </button>
       </view>
     </view>
   </view>
